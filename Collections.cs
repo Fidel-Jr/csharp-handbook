@@ -1,6 +1,6 @@
 using System;
 
-namespace Arrays
+namespace Collections
 {
     internal class Program
     {
