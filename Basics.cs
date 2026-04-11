@@ -56,7 +56,7 @@ namespace Basics
       x = y = z = 10;
       Console.WriteLine(x + y + z); // 30
 
-      // You should always name your variable in a meaningful way
+      // You should always give your variables meaningful names
       
     }
   }
