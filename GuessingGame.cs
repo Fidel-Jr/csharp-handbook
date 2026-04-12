@@ -6,6 +6,11 @@ namespace GuessingGame
     {
         static void Main(string[] args)
         {
+
+            /* This will run the guessing game until the user decides to stop it.
+               After each game, it will ask if the user wants to play again.
+            */
+            
             Console.WriteLine("Welcome to the Number Guessing Game!\n");
 
             do
@@ -18,6 +23,7 @@ namespace GuessingGame
             Console.ReadLine();
         }
 
+        // This method implements a number guessing game where the user has to guess a randomly generated number between 0 and 4.
         static void PlayGuessingGame()
         {
             Random randomNumberGenerator = new Random();
@@ -36,6 +42,9 @@ namespace GuessingGame
             Console.WriteLine();
         }
 
+        /* This method prompts the user to play the guessing game again and returns true if the user wants to play again,
+           otherwise it returns false.
+        */
         static bool AskToPlayAgain()
         {
             Console.Write("Do you want to play again? (y/n): ");
@@ -44,6 +53,9 @@ namespace GuessingGame
             return input.Trim().ToLower().Contains("y");
         }
 
+        /* This method reads an integer from the console and validates the input.
+           It keeps prompting the user until a valid integer is entered.
+        */
         static int ReadInt(string message)
         {
             Console.Write($"{message}: ");
