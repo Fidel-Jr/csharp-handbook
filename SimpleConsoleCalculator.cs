@@ -6,6 +6,13 @@ namespace SimpleConsoleCalculator
     {
         static void Main(string[] args)
         {
+
+            /* Will run the calculator until the user decides to stop it.
+               It will ask for two numbers and an operator, then it will calculate the result and display it to the user.
+               After that, it will ask if the user wants to calculate something else.
+               If the user enters 'y', it will continue, otherwise it will stop and display a thank you message.
+            */
+            
             bool looping = true;
             Console.WriteLine("Welcome to my calculator.\n \n");
             do
@@ -41,6 +48,9 @@ namespace SimpleConsoleCalculator
 
         }
 
+        /* This method reads an integer from the console and validates the input.
+           It keeps prompting the user until a valid integer is entered.
+        */
         static int ReadInt(string message)
         {
             Console.Write($"{message}: ");
@@ -52,30 +62,10 @@ namespace SimpleConsoleCalculator
             return result;
         }
 
-        static int Calculate(int n1, int n2, string op)
-        {
-            int result = 0;
-
-            if (op == "+")
-            {
-                result = n1 + n2;
-            }
-            else if (op == "-")
-            {
-                result = n1 - n2;
-            }
-            else if (op == "*")
-            {
-                result = n1 * n2;
-            }
-            else if (op == "/")
-            {
-                result = n1 / n2;
-            }
-            return result;
-        }
-
-
+        /* This method prompts the user to select an operator for a calculation.
+           It validates the input to ensure that it is a valid operator (either "+", "-", "*", or "/") and
+           returns the selected operator as a string.
+        */
         static string SelectOp(string message)
         {
             bool isValid = false;
@@ -120,6 +110,32 @@ namespace SimpleConsoleCalculator
             } while (!isValid);
 
             return operatorType;
+        }
+
+        /* This method takes two integers and a string operator as input and performs the corresponding arithmetic operation
+           based on the operator provided. It returns the result of the calculation.
+        */
+        static int Calculate(int n1, int n2, string op)
+        {
+            int result = 0;
+
+            if (op == "+")
+            {
+                result = n1 + n2;
+            }
+            else if (op == "-")
+            {
+                result = n1 - n2;
+            }
+            else if (op == "*")
+            {
+                result = n1 * n2;
+            }
+            else if (op == "/")
+            {
+                result = n1 / n2;
+            }
+            return result;
         }
 
     }
