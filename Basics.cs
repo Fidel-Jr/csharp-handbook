@@ -174,8 +174,47 @@ namespace Basics
         }
         Console.WriteLine(i); // then this skips the printing and continue to the next iteration
       }
+
+      // Method / Function
+      // A method is a block of code which only runs when it is called.
+      MyMethod(); // Calling a method.
+
+      // You can pass data, known as parameters, into a method.
+      // Information can be passed to methods as parameter. Parameters act as variables inside the method
+      MyMethodTwo("John"); // Calling a method with a parameter
       
+      // Multiple parameters
+      MyMethodThree("John", 21); // Calling a method with multiple parameters
+
+      // Return Values
+      // Void keyword indicates that the method should not return a value.
+      /*
+        If you want the method to return a value, you can use a primitive data type (such as int or double) instead of void, 
+        and use the return keyword inside the method
+      */
+      Console.WriteLine(MyMethodFour(3)); // Calling the method that returns a value
       
     }
+    
+    // Methods
+    static void MyMethod() 
+    {
+      Console.WriteLine("I just got executed!");
+    }
+    static void MyMethodTwo(string fname) 
+    {
+      Console.WriteLine(fname + " Refsnes");
+    }
+    static void MyMethodThree(string fname, int age) 
+    {
+      Console.WriteLine(fname + " is " + age);
+    }
+
+    // This returns an int value
+    static int MyMethodFour(int x) 
+    {
+      return 5 + x;
+    }
+    
   }
 }
