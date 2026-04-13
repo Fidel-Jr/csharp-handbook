@@ -20,6 +20,11 @@ namespace Classes
         {
 
         }
+        // Method to display the name and age of the person.
+        public void DisplayInfo()
+        {
+            Console.WriteLine($"Name: {Name}, Age: {Age}");
+        }
 
     }
 
@@ -31,6 +36,9 @@ namespace Classes
             Person person2 = new Person("Dwayne", 30); // Creating another instance of the Person class with the name "Dwayne" and age 30.
             // Displaying the name and age of the first person.
             Console.WriteLine($"Person 1: Name - {person.Name} Age - {person.Age}");
+
+            person.DisplayInfo(); // Calling the DisplayInfo method to display the name and age of the first person.
+            
             // Displaying the name and age of the second person.
             Console.WriteLine($"Person 1: Name - {person2.Name} Age - {person2.Age}");
 
